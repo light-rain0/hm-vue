@@ -1,10 +1,8 @@
-import App from './App.vue'
-import './styles/base.css' // css 样式重置
 // import './styles/index.css' // 公共全局样式
 import {createApp} from "vue";
-import Appcp2 from "@/Appcp2.vue";
+import App from './App.vue'
 
-const app = createApp(Appcp2)
+const app = createApp(App)
 // 全局注册 Vue.component(组件名,组件对象)
 // app.component("HmButton", HmButton)
 // 自定义全局指令

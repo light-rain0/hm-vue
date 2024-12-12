@@ -17,7 +17,7 @@
           <img src="https://yanxuan-item.nosdn.127.net/f8c37ffa41ab1eb84bff499e1f6acfc7.jpg" />
         </td>
         <td>
-          <MyTag v-model="temp"/>
+          <MyTag />
         </td>
       </tr>
       </tbody>

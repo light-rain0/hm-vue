@@ -1,10 +1,8 @@
 <script>
 export default {
-  props: {
-    value: String
-  },
   data() {
     return {
+      textValue: '',
       isEdit: true
     }
   },
@@ -18,17 +16,21 @@ export default {
     handleEnter(e) {
       this.$emit('input', e.target.value)
     }
+  },
+  watch: {
+    value() {
+      this.isEdit = false
+    }
   }
-
 }
 </script>
 
 <template>
   <div class="my-tag">
-    <input ref="inp" @keyup.enter="handleEnter" :value="value" v-fouc @blur="isEdit = false" v-if="isEdit" class="input"
+    <input ref="inp" @keyup.enter="handleEnter" v-model="textValue" v-fouc @blur="isEdit = false" v-if="isEdit" class="input"
            type="text"
            placeholder="输入标签"/>
-    <div class="text" v-else @dblclick="handleClick"> {{ value }}</div>
+    <div class="text" v-else @dblclick="handleClick"> {{ textValue }}</div>
   </div>
 </template>
 
